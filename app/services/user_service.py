@@ -4,7 +4,7 @@ from app.models.users import UserCreate, UserResponse
 class UserService:
     def __init__(self):
         # In a real app, you would inject your database session here
-        self.fake_db = []
+        self.fake_db: list[UserResponse] = []
         self.current_id = 1
 
     def create_user(self, user_in: UserCreate) -> UserResponse:
